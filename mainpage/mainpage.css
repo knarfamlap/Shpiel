@@ -1,0 +1,57 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 200px;
+  grid-gap: 20px;
+}
+.box1 {
+  width: 100%;
+  height: 125%;
+  text-align: center;
+  border: 1px solid black;
+}
+.box2 {
+  width: 100%;
+  height: 150%;
+  text-align: right;
+  border: 1px solid black;
+}
+.box3 {
+  width: 100%;
+  height: 200%;
+  text-align:center;
+  border: 1px solid black;
+}
+.box4 {
+  width: 100%;
+  height: 175%;
+  text-align: left;
+  border: 1px solid black;
+}
+.topnav {
+    background-color: pink;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.topnav a {
+    float: left;
+    color: green;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a:hover {
+    background-color: red;
+    color: black;
+}
+.topnav a.active {
+    background-color: blue;
+    color: white;
+}
+
+
+.titlewithlogin {
+ display: flex;
+ justify-content: space-between;
+}
