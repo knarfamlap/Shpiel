@@ -15,9 +15,9 @@ class Comment(ndb.Model):
 class Article(ndb.Model):
     title = ndb.StringProperty(required=True)
     body = ndb.StringProperty(required=True)
-    category = ndb.StringProperty(required=True)
-    post_owner = ndb.KeyProperty(User)
-    comments = ndb.KeyProperty(Comment, repeated=True)
+    # category = ndb.StringProperty(required=True)
+    # post_owner = ndb.KeyProperty(User)
+    # comments = ndb.KeyProperty(Comment, repeated=True)
 
 
 
