@@ -9,24 +9,28 @@
   height: 125%;
   text-align: center;
   border: 1px solid black;
+  background-color: blue;
 }
 .box2 {
   width: 100%;
   height: 150%;
   text-align: right;
   border: 1px solid black;
+  background-color: green;
 }
 .box3 {
   width: 100%;
   height: 200%;
   text-align:center;
   border: 1px solid black;
+  background-color: yellow;
 }
 .box4 {
   width: 100%;
   height: 175%;
   text-align: left;
   border: 1px solid black;
+  background-color: #c10d94;
 }
 .topnav {
     background-color: pink;
