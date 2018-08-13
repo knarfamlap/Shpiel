@@ -1,32 +1,70 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 200px;
+  grid-auto-rows: minmax(300px, auto);
   grid-gap: 20px;
 }
-.box1 {
+
+.box {
   width: 100%;
-  height: 125%;
   text-align: center;
   border: 1px solid black;
 }
+
+.box1 {
+  /* width: 100%;
+  height: 125%;
+  text-align: center;
+  border: 1px solid black; */
+}
 .box2 {
-  width: 100%;
+  /* width: 100%;
   height: 150%;
-  text-align: right;
+  text-align: center;
   border: 1px solid black;
+  margin-bottom: 100px; */
 }
 .box3 {
-  width: 100%;
+  /* width: 100%;
   height: 200%;
   text-align:center;
   border: 1px solid black;
+  margin-bottom: 100px; */
 }
 .box4 {
-  width: 100%;
+  /* width: 100%;
   height: 175%;
-  text-align: left;
+  text-align: center;
   border: 1px solid black;
+  margin-bottom: 100px; */
+}
+.box5 {
+  /* width: 100%;
+  height: 175%;
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 100px; */
+}
+.box6 {
+  /* width: 100%;
+  height: 175%;
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 100px; */
+}
+.box7 {
+  /* width: 100%;
+  height: 175%;
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 100px; */
+}
+.box8 {
+  /* width: 100%;
+  height: 175%;
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 100px; */ */
 }
 .topnav {
     background-color: pink;
