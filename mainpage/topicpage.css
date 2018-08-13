@@ -18,3 +18,30 @@
 .topnav a.active {
     background-color: blue;
     color: white;
+}
+.boxcontainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100px 200px;
+      grid-gap: 20px;
+}
+.news {
+  width: 100%;
+  height: 135%;
+  text-align: center;
+  border: 1px solid black;
+  background-color: grey;
+}
+.titlewithlogin {
+ display: flex;
+ justify-content: space-between;
+}
+
+#login {
+   background-color: blue;
+   font-size: 25px;
+}
+#signup {
+  background-color: lightblue;
+  font-size: 25px;
+}
