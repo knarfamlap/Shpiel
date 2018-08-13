@@ -9,9 +9,9 @@ jina_env = jinja2.Environment(
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-
+        self.response.write('Hello World')
 
 
 app = webapp2.WSGIApplication([
-    ('/', MainPage)
+    ('/', MainPage),
 ], debug=True)
