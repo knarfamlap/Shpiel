@@ -19,10 +19,8 @@ jinja_env = jinja2.Environment(
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello World')
         mainpage_template = jinja_env.get_template('templates/mainpage.html')
         self.response.out.write(mainpage_template.render())
-        print("Hello Worldsdfsadfsafsdfsafsafsdafsdfaafsadf")
 
     def post(self):
         bdy = self.request.get('user-first-body')
@@ -43,7 +41,6 @@ class News(webapp2.RequestHandler):
 
 class Sports(webapp2.RequestHandler):
     def get(self):
-        self.response.write('sports')
         sports_post = Article.query().filter(Article.category == 'Sports').fetch()
         sports_template = jinja_env.get_template('templates/sports.html')
         self.response.out.write(sports_template.render())
@@ -52,7 +49,6 @@ class Sports(webapp2.RequestHandler):
 
 class Tech(webapp2.RequestHandler):
     def get(self):
-        self.response.write('tech')
         tech_post = Article.query().filter(Article.category == 'Tech').fetch()
         tech_template = jinja_env.get_template('templates/tech.html')
         self.response.out.write(tech_template.render())
@@ -61,7 +57,6 @@ class Tech(webapp2.RequestHandler):
 
 class FeelGood(webapp2.RequestHandler):
     def get(self):
-        self.response.write('feelgood')
         feelgood_post = Article.query().filter(Article.category == 'FeelGood').fetch()
         feelgood_template = jinja_env.get_template('templates/feelgood.html')
         self.response.out.write(feelgood_template.render())
@@ -69,7 +64,6 @@ class FeelGood(webapp2.RequestHandler):
 
 class Business(webapp2.RequestHandler):
     def get(self):
-        self.response.write('business')
         business_post = Article.query().filter(Article.category == 'Business').fetch()
         business_template = jinja_env.get_template('templates/business.html')
         self.response.out.write(business_template.render())
@@ -79,7 +73,6 @@ class Business(webapp2.RequestHandler):
 
 class Caleb(webapp2.RequestHandler):
     def get(self):
-        self.response.write('caleb')
         caleb_post = Article.query().filter(Article.category == 'Caleb').fetch()
         caleb_template = jinja_env.get_template('templates/celeb.html')
         self.response.out.write(caleb_template.render())
@@ -88,7 +81,6 @@ class Caleb(webapp2.RequestHandler):
 
 class Books(webapp2.RequestHandler):
     def get(self):
-        self.response.write('books')
         books_post = Article.query().filter(Article.category == 'Books').fetch()
         books_template = jinja_env.get_template('templates/books.html')
         self.response.out.write(books_template.render())
@@ -97,7 +89,6 @@ class Books(webapp2.RequestHandler):
 
 class Education(webapp2.RequestHandler):
     def get(self):
-        self.response.write('education')
         education_post = Article.query().filter(Article.category == 'Education').fetch()
         education_template = jinja_env.get_template('templates/education.html')
         self.response.out.write(education_template.render())
