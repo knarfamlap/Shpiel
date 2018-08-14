@@ -49,13 +49,13 @@ class Sports(webapp2.RequestHandler):
         sports_post = Article.query().filter(Article.category == 'Sports').fetch()
         sports_template = jinja_env.get_template('templates/sports.html')
         self.response.out.write(sports_template.render())
-        self.repsonse.write(sports_post)
+        self.response.write(sports_post)
 
 
 class Tech(webapp2.RequestHandler):
     def get(self):
         self.response.write('tech')
-        tech_post = Article.query().filter(Aticle.category == 'Tech').fetch()
+        tech_post = Article.query().filter(Article.category == 'Tech').fetch()
         tech_template = jinja_env.get_template('templates/tech.html')
         self.response.out.write(tech_template.render())
         self.response.write(tech_post)
@@ -64,7 +64,7 @@ class Tech(webapp2.RequestHandler):
 class FeelGood(webapp2.RequestHandler):
     def get(self):
         self.response.write('feelgood')
-        feelgood_post = Article.query().filter(Article.category == 'feelgood').fetch()
+        feelgood_post = Article.query().filter(Article.category == 'FeelGood').fetch()
         feelgood_template = jinja_env.get_template('templates/feelgood.html')
         self.response.out.write(feelgood_template.render())
         self.response.write(feelgood_post)
@@ -82,8 +82,8 @@ class Business(webapp2.RequestHandler):
 class Caleb(webapp2.RequestHandler):
     def get(self):
         self.response.write('caleb')
-        caleb_post = Article.qurey().filter(Article.category == 'Caleb').fetch()
-        caleb_template = jinja_env.get_template('templates/caleb.html')
+        caleb_post = Article.query().filter(Article.category == 'Caleb').fetch()
+        caleb_template = jinja_env.get_template('templates/celeb.html')
         self.response.out.write(caleb_template.render())
         self.response.write(caleb_post)
 
@@ -100,7 +100,7 @@ class Books(webapp2.RequestHandler):
 class Education(webapp2.RequestHandler):
     def get(self):
         self.response.write('education')
-        education_post = Article.qurey().filter(Article.category == 'Education').fetch()
+        education_post = Article.query().filter(Article.category == 'Education').fetch()
         education_template = jinja_env.get_template('templates/education.html')
         self.response.out.write(education_template.render())
         self.response.write(education_post)
