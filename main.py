@@ -25,8 +25,6 @@ class MainPage(webapp2.RequestHandler):
         print("Hello Worldsdfsadfsafsdfsafsafsdafsdfaafsadf")
 
     def post(self):
-        # print(self.request.get('user-first-ln'))
-        # self.response.write(self.request.get('user-first-ln'))
         bdy = self.request.get('user-first-body')
         ttle = self.request.get('user-first-title')
         tp = self.request.get('topic-selector') #topic
