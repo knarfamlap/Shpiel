@@ -32,10 +32,10 @@ class MainPage(webapp2.RequestHandler):
         self.response.out.write(mainpage_template.render({'articles' : all_articles}))
 
     def post(self):
-        bdy = self.request.get('user-body')
         ttle = self.request.get('user-title')
+        bdy = self.request.get('user-body')
         tp = self.request.get('topic-selector') #topic
-        article= Article(title= ttle, body=bdy, category=tp)
+        article= Article(title= ttle, body=bdy, category="news")
         article.put()
 
 

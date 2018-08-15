@@ -1,34 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <title></title>
-</head>
-
-<body>
-  <h2>Main Page</h2>
-  <form action="/" method="post">
-    <input type="text" name="user-first-title" value="title">
-    <input type="text" name="user-first-body" value="body">
-    <select name="topic-selector">
-
-      <option value="News">News</option>
-      <option value="Sports">sports</option>
-      <option value="Tech">Tech</option>
-      <option value="FeelGood">Feelgood</option>
-      <option value="Business">Business</option>
-      <option value="Caleb">Caleb</option>
-      <option value="Books">Books</option>
-      <option value="Education">Education</option>
-    </select>
-
-    <button type="submit" name="button">SUBMIT</button>
-  </form>
-</body>
-
-</html> -->
-
 
 <!DOCTYPE html>
 <html>
@@ -42,218 +11,209 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-.w3-bar-block .w3-bar-item {padding:20px}
-.btn{border-color: inherit}
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Karma", sans-serif
+  }
 
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
+  .w3-bar-block .w3-bar-item {
+    padding: 20px
+  }
 
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+  .btn {
+    border-color: inherit
+  }
 
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 </style>
+
 <body>
 
-<!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()"
-  class="w3-bar-item w3-button">Close Menu</a>
-  <a href="/" onclick="w3_close()" class="w3-bar-item w3-button">Main Page</a>
-  <a href="/books" onclick="w3_close()" class="w3-bar-item w3-button">Books</a>
-  <a href="/business" onclick="w3_close()" class="w3-bar-item w3-button">Business</a>
-  <a href="/celeb" onclick="w3_close()" class="w3-bar-item w3-button">Celeb</a>
-  <a href="/education" onclick="w3_close()" class="w3-bar-item w3-button">Education</a>
-  <a href="/feelgood" onclick="w3_close()" class="w3-bar-item w3-button">FeelGood</a>
-  <a href="/news" onclick="w3_close()" class="w3-bar-item w3-button">News</a>
-  <a href="/sports" onclick="w3_close()" class="w3-bar-item w3-button">Sports</a>
-  <a href="/tech" onclick="w3_close()" class="w3-bar-item w3-button">Tech</a>
-</nav>
+  <!-- Sidebar (hidden by default) -->
+  <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
+    <a href="/" onclick="w3_close()" class="w3-bar-item w3-button">Main Page</a>
+    <a href="/books" onclick="w3_close()" class="w3-bar-item w3-button">Books</a>
+    <a href="/business" onclick="w3_close()" class="w3-bar-item w3-button">Business</a>
+    <a href="/celeb" onclick="w3_close()" class="w3-bar-item w3-button">Celeb</a>
+    <a href="/education" onclick="w3_close()" class="w3-bar-item w3-button">Education</a>
+    <a href="/feelgood" onclick="w3_close()" class="w3-bar-item w3-button">FeelGood</a>
+    <a href="/news" onclick="w3_close()" class="w3-bar-item w3-button">News</a>
+    <a href="/sports" onclick="w3_close()" class="w3-bar-item w3-button">Sports</a>
+    <a href="/tech" onclick="w3_close()" class="w3-bar-item w3-button">Tech</a>
+  </nav>
 
-<!-- Top menu -->
-<div class="w3-top">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-    <div class="w3-right w3-padding-16">
+  <!-- Top menu -->
+  <div class="w3-top">
+    <div class=" w3-xlarge" style="max-width:1200px;margin:auto">
+      <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+      <div class="w3-right w3-padding-16">
 
 
-          <button type="submit" name="button">Log In</button>
-          <button type="submit" name="button">Profile</button>
+        <button type="button" class="btn btn-primary" name="button">Log In</button>
+        <button type="button" class="btn btn-primary" name="button">Profile</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Post</button>
 
-        <button id="myBtn"  name="button">Post</button>
-        <div class="modal" id="myModal">
-          <span class="close">&times;</span>
-          <input type="text" name="title" value="" placeholder="Title">
+      </div>
+      <div class="w3-center w3-padding-16">Main Page</div>
+    </div>
+  </div>
+
+<form  action="/" method="post">
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New Post</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
         </div>
-
-    </div>
-    <div class="w3-center w3-padding-16">Main Page</div>
-  </div>
-</div>
-
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-
-
-    <form  action="/" method="post">
-
-        <input class="form-control form-control-lg" type="text" placeholder="Title" name="user-title">
-        <input class="form-control" type="text" placeholder="Body" name="user-body">
-        <select class="form-control form-control-sm" name="topic-selector">
-          <option>News</option>
-          <option>Books</option>
-          <option>Business</option>
-          <option>Celeb</option>
-          <option>Education</option>
-          <option>Feel Good</option>
-          <option>Sports</option>
-          <option>Tech</option>
-        </select>
-        <button type="submit" name="button">SUBMIT</button>
-
-      </form>
-
-
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-    {% for each_article in articles %}
-    <div class="w3-quarter">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Touched_by_His_Noodly_Appendage_HD.jpg" alt="Sandwich" style="width:100%">
-      <h3>{{each_article.title}}</h3>
-      <p>{{each_article.body}}</p>
-    </div>
-    {% endfor %}
-  </div>
-
-
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Title:</label>
+              <input type="text" class="form-control" id="recipient-name" name="user-title">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Body:</label>
+              <textarea class="form-control" id="message-text" name="user-body"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/">  <button type="submit" class="btn btn-primary">POST</button></a>
+        </div>
+      </div>
     </div>
   </div>
+  </form>
 
-  <hr id="about">
 
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32 w3-center">
-    <h3>About Me, The Food Man</h3><br>
-    <img src="/w3images/chef.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
-    <div class="w3-padding-32">
-      <h4><b>I am Who I Am!</b></h4>
-      <h6><i>With Passion For Real, Good Food</i></h6>
-      <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+
+
+    <!-- First Photo Grid-->
+
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+        {% for each_article in articles %}
+      <div class="w3-quarter">
+        <div id="postPic" style="width:100%">
+
+      </div>
+        <h3>{{each_article.title}}</h3>
+        <p>{{each_article.body}}</p>
+      </div>
+      {% endfor %}
     </div>
+
+
+    <!-- Pagination -->
+    <div class="w3-center w3-padding-32">
+      <div class="w3-bar">
+        <a href="#" class="btn btn-primary w3-bar-item w3-button w3-hover-black">«</a>
+        <a href="#" class="btn btn-primary w3-bar-item w3-black  w3-hover-black">1</a>
+        <a href="#" class="btn btn-primary w3-bar-item w3-button w3-hover-black">2</a>
+        <a href="#" class="btn btn-primary w3-bar-item w3-button w3-hover-black">3</a>
+        <a href="#" class="btn btn-primary w3-bar-item w3-button w3-hover-black">4</a>
+        <a href="#" class="btn btn-primary w3-bar-item w3-button w3-hover-black">»</a>
+      </div>
+    </div>
+
+    <hr id="about">
+
+    <!-- About Section -->
+    <!-- <div class="w3-container w3-padding-32 w3-center">
+      <h3>About Me, The Food Man</h3><br>
+      <img src="/w3images/chef.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+      <div class="w3-padding-32">
+        <h4><b>I am Who I Am!</b></h4>
+        <h6><i>With Passion For Real, Good Food</i></h6>
+        <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum,
+          porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      </div>
+    </div> -->
+
+    <!-- Footer -->
+    <footer class="w3-row-padding w3-padding-32">
+      <div class="w3-third">
+        <h3>FOOTER</h3>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      </div>
+
+      <div class="w3-third">
+        <h3>Topics</h3>
+        <ul class="w3-ul w3-hoverable">
+          <li class="w3-padding-16">
+            <img src="https://media.mnn.com/assets/images/2016/10/lesserflamingos-natron-2.jpg" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Animals</span><br>
+            <span>Flamingoes</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkRcf_BWokNpCHRdixlywc2w6oXRWrM1uMdqvspiIw0gaLm_ZV" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Art</span><br>
+            <span>Modern</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-third w3-serif">
+        <h3>POPULAR TAGS</h3>
+        <p>
+          <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- End page content -->
   </div>
-  <hr>
 
-  <!-- Footer -->
-  <footer class="w3-row-padding w3-padding-32">
-    <div class="w3-third">
-      <h3>FOOTER</h3>
-      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-    </div>
+  <script>
+    $('#exampleModal').on('show.bs.modal', function(event) {
+      var button = $(event.relatedTarget) // Button that triggered the modal
+      var recipient = button.data('whatever') // Extract info from data-* attributes
+      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+      var modal = $(this)
+      modal.find('.modal-title').text("Post")
+      // modal.find('.modal-body input').val(recipient)
+    })
 
-    <div class="w3-third">
-      <h3>BLOG POSTS</h3>
-      <ul class="w3-ul w3-hoverable">
-        <li class="w3-padding-16">
-          <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-          <span class="w3-large">Lorem</span><br>
-          <span>Sed mattis nunc</span>
-        </li>
-        <li class="w3-padding-16">
-          <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-          <span class="w3-large">Ipsum</span><br>
-          <span>Praes tinci sed</span>
-        </li>
-      </ul>
-    </div>
+    let pics = ["https://78.media.tumblr.com/890eedd4b23b25347264f6ac8c8e6b98/tumblr_p33fo10WTj1r6pbleo2_1280.png",
+    "https://upload.wikimedia.org/wikipedia/commons/0/0a/The_Great_Wave_off_Kanagawa.jpg",
+    "https://get.pxhere.com/photo/street-wall-blue-colorful-graffiti-street-art-art-mural-greece-athens-work-of-art-painting-wall-1195942.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/9/90/Touched_by_His_Noodly_Appendage_HD.jpg"];
 
-    <div class="w3-third w3-serif">
-      <h3>POPULAR TAGS</h3>
-      <p>
-        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
-      </p>
-    </div>
-  </footer>
+    let num = Math.floor(Math.random() * (pics.length - 1));
 
-<!-- End page content -->
-</div>
+    let bg = document.getElementById('picPost');
 
-<script>
+    bg.style.backgroundImage = 'url(' + pics[num] + ')';
 
-let modal = document.getElementById('myModal');
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
 
-let btn = document.getElementById("myBtn");
-
-var span = document.getElementByClassName("close")[0];
-
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-span.onclick = function() {
-  modal.style.display = "none"
-}
-
-window.onclick = function(event) {
-  if(event.target === modal){
-    modal.style.display = "none";
-  }
-}
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-}
-
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-}
-</script>
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  </script>
 
 </body>
+
 </html>
