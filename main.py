@@ -13,14 +13,27 @@ jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
+class Post_Something(webapp2.RequestHandler):
+    def get(self):
+        post_template = jinja_env.get_template('templates/post.html')
+        self.response.out.write(post_template.render())
+
+    # def post(self):
+    #     bdy = self.request.get('user-body')
+    #     ttle = self.request.get('user-title')
+    #     tp = self.request.get('topic-selector') #topic
+    #     article= Article(title= ttle, body=bdy, category=tp)
+    #     article.put()
+
 class MainPage(webapp2.RequestHandler):
     def get(self):
         mainpage_template = jinja_env.get_template('templates/mainpage.html')
-        self.response.out.write(mainpage_template.render())
+        all_articles = Article.query().fetch()
+        self.response.out.write(mainpage_template.render({'articles' : all_articles}))
 
     def post(self):
-        bdy = self.request.get('user-first-body')
-        ttle = self.request.get('user-first-title')
+        bdy = self.request.get('user-body')
+        ttle = self.request.get('user-title')
         tp = self.request.get('topic-selector') #topic
         article= Article(title= ttle, body=bdy, category=tp)
         article.put()
@@ -92,6 +105,7 @@ class Education(webapp2.RequestHandler):
 
 
 
+
 app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/news', News),
@@ -101,5 +115,6 @@ app = webapp2.WSGIApplication([
     ('/business', Business),
     ('/celeb', Caleb),
     ('/books', Books),
-    ('/education', Education)
+    ('/education', Education),
+    ('/post', Post_Something)
 ], debug=True)
