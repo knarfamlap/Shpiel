@@ -1,40 +1,37 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Main Page</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<style>
+  <title>Main Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Karma", sans-serif
+    }
 
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Karma", sans-serif
-  }
+    .w3-bar-block .w3-bar-item {
+      padding: 20px
+    }
 
-  .w3-bar-block .w3-bar-item {
-    padding: 20px
-  }
-
-  .btn {
-    border-color: inherit
-  }
-
-
-
-</style>
+    .btn {
+      border-color: inherit
+    }
+  </style>
 </head>
+
 <body>
 
   <!-- Sidebar (hidden by default) -->
@@ -63,23 +60,24 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Post</button>
 
       </div>
-      <div class=" w3-center w3-padding-16">SHPEIL</div>
+      <div class=" w3-center w3-padding-16">SHPIEL</div>
     </div>
   </div>
 
-<form  action="/" method="post">
 
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">New Post</h5>
+
+          <h5 class="modal-title" id="exampleModalLabel">Post</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
         </div>
-        <div class="modal-body">
-          <form>
+
+          <div class="modal-body">
+            <form action="/news" method="post" id="form1">
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Title:</label>
               <input type="text" class="form-control" id="recipient-name" name="user-title">
@@ -88,16 +86,18 @@
               <label for="message-text" class="col-form-label">Body:</label>
               <textarea class="form-control" id="message-text" name="user-body"></textarea>
             </div>
-          </form>
-        </div>
+            </form>
+          </div>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a href="/">  <button type="submit" class="btn btn-primary">POST</button></a>
+          <button type="submit" form="form1" class="btn btn-primary" name="button">POST</button>
         </div>
+
       </div>
     </div>
   </div>
-  </form>
+
 
 
   <!-- !PAGE CONTENT! -->
@@ -108,11 +108,11 @@
     <!-- First Photo Grid-->
 
     <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-        {% for each_article in articles %}
+      {% for each_article in articles %}
       <div class="w3-quarter">
         <div style="width:100%">
           <img class="picPost" src="" alt="" widht="190px" height="181">
-      </div>
+        </div>
         <h3>{{each_article.title}}</h3>
         <p>{{each_article.body}}</p>
       </div>
@@ -196,13 +196,14 @@
     })
     window.onload = () => {
       let pics = ["https://78.media.tumblr.com/890eedd4b23b25347264f6ac8c8e6b98/tumblr_p33fo10WTj1r6pbleo2_1280.png",
-      "https://upload.wikimedia.org/wikipedia/commons/0/0a/The_Great_Wave_off_Kanagawa.jpg",
-      "https://get.pxhere.com/photo/street-wall-blue-colorful-graffiti-street-art-art-mural-greece-athens-work-of-art-painting-wall-1195942.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/9/90/Touched_by_His_Noodly_Appendage_HD.jpg"];
+        "https://upload.wikimedia.org/wikipedia/commons/0/0a/The_Great_Wave_off_Kanagawa.jpg",
+        "https://get.pxhere.com/photo/street-wall-blue-colorful-graffiti-street-art-art-mural-greece-athens-work-of-art-painting-wall-1195942.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/90/Touched_by_His_Noodly_Appendage_HD.jpg"
+      ];
 
       let bg = document.getElementsByClassName("picPost");
 
-      for(let i = 0; i < bg.length; i++) {
+      for (let i = 0; i < bg.length; i++) {
         const num = Math.floor(Math.random() * (pics.length - 1));
         bg[i].src = pics[num];
       }

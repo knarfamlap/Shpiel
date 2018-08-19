@@ -13,20 +13,10 @@ jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-class Post_Something(webapp2.RequestHandler):
-    def get(self):
-        post_template = jinja_env.get_template('templates/post.html')
-        self.response.out.write(post_template.render())
-
-    # def post(self):
-    #     bdy = self.request.get('user-body')
-    #     ttle = self.request.get('user-title')
-    #     tp = self.request.get('topic-selector') #topic
-    #     article= Article(title= ttle, body=bdy, category=tp)
-    #     article.put()
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
+        print("hello")
         mainpage_template = jinja_env.get_template('templates/mainpage.html')
         all_articles = Article.query().fetch()
         self.response.out.write(mainpage_template.render({'articles' : all_articles}))
@@ -35,9 +25,8 @@ class MainPage(webapp2.RequestHandler):
         ttle = self.request.get('user-title')
         bdy = self.request.get('user-body')
         tp = self.request.get('topic-selector') #topic
-        article= Article(title= ttle, body=bdy, category="news")
+        article = Article(title= ttle, body=bdy, category="news")
         article.put()
-
 
 class News(webapp2.RequestHandler):
     def get(self):
@@ -115,6 +104,5 @@ app = webapp2.WSGIApplication([
     ('/business', Business),
     ('/celeb', Caleb),
     ('/books', Books),
-    ('/education', Education),
-    ('/post', Post_Something)
+    ('/education', Education)
 ], debug=True)
