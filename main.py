@@ -92,6 +92,12 @@ class Education(webapp2.RequestHandler):
         self.response.out.write(education_template.render())
         self.response.write(education_post)
 
+class Temp(webapp2.RequestHandler):
+    def get(self):
+        temp_template = jinja_env.get_template('templates/temp.html')
+        self.response.out.write(temp_template.render())
+
+
 
 
 
@@ -104,5 +110,6 @@ app = webapp2.WSGIApplication([
     ('/business', Business),
     ('/celeb', Caleb),
     ('/books', Books),
-    ('/education', Education)
+    ('/education', Education),
+    ('/temp', Temp)
 ], debug=True)
