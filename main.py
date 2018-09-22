@@ -24,7 +24,7 @@ class MainPage(webapp2.RequestHandler):
     def post(self):
         ttle = self.request.get('user-title')
         bdy = self.request.get('user-body')
-        tp = self.request.get('topic-selector') #topic
+        tp = self.request.get('topic-selector') 
         article = Article(title= ttle, body=bdy, category="news")
         article.put()
 
@@ -95,7 +95,8 @@ class Education(webapp2.RequestHandler):
 class Temp(webapp2.RequestHandler):
     def get(self):
         temp_template = jinja_env.get_template('templates/temp.html')
-        self.response.out.write(temp_template.render())
+        all_articles = Article.query().fetch()
+        self.response.out.write(temp_template.render({'articles' : all_articles}))
 
 
 
